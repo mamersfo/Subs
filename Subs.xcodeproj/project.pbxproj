@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B64B7CF16345F4F00272112 /* blijdorp-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B64B7CE16345F4F00272112 /* blijdorp-icon.png */; };
 		5B6E20621608DF6400FCE96C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6E20611608DF6400FCE96C /* UIKit.framework */; };
 		5B6E20641608DF6400FCE96C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6E20631608DF6400FCE96C /* Foundation.framework */; };
 		5B6E20661608DF6400FCE96C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6E20651608DF6400FCE96C /* CoreGraphics.framework */; };
@@ -14,11 +15,16 @@
 		5B6E206E1608DF6400FCE96C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6E206D1608DF6400FCE96C /* main.m */; };
 		5B6E20721608DF6400FCE96C /* SubsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6E20711608DF6400FCE96C /* SubsAppDelegate.m */; };
 		5B6E20751608DF6400FCE96C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B6E20731608DF6400FCE96C /* MainStoryboard.storyboard */; };
-		5B6E20781608DF6400FCE96C /* SubsMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6E20771608DF6400FCE96C /* SubsMasterViewController.m */; };
-		5B6E207B1608DF6400FCE96C /* SubsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6E207A1608DF6400FCE96C /* SubsDetailViewController.m */; };
+		5B6E20781608DF6400FCE96C /* SelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6E20771608DF6400FCE96C /* SelectionViewController.m */; };
+		5B6E207B1608DF6400FCE96C /* ParamsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6E207A1608DF6400FCE96C /* ParamsViewController.m */; };
+		5B6E208C1609149700FCE96C /* SchemeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6E208B1609149600FCE96C /* SchemeViewController.m */; };
+		5B6E209316091D7500FCE96C /* NSArray+Addons.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6E209216091D7500FCE96C /* NSArray+Addons.m */; };
+		5B6E2096160A615E00FCE96C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6E2095160A615E00FCE96C /* AudioToolbox.framework */; };
+		5BC2FF70160B10EC00792238 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BC2FF6F160B10EC00792238 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B64B7CE16345F4F00272112 /* blijdorp-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blijdorp-icon.png"; sourceTree = "<group>"; };
 		5B6E205D1608DF6400FCE96C /* Subs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Subs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B6E20611608DF6400FCE96C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5B6E20631608DF6400FCE96C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -30,10 +36,16 @@
 		5B6E20701608DF6400FCE96C /* SubsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubsAppDelegate.h; sourceTree = "<group>"; };
 		5B6E20711608DF6400FCE96C /* SubsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubsAppDelegate.m; sourceTree = "<group>"; };
 		5B6E20741608DF6400FCE96C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		5B6E20761608DF6400FCE96C /* SubsMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubsMasterViewController.h; sourceTree = "<group>"; };
-		5B6E20771608DF6400FCE96C /* SubsMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubsMasterViewController.m; sourceTree = "<group>"; };
-		5B6E20791608DF6400FCE96C /* SubsDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubsDetailViewController.h; sourceTree = "<group>"; };
-		5B6E207A1608DF6400FCE96C /* SubsDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubsDetailViewController.m; sourceTree = "<group>"; };
+		5B6E20761608DF6400FCE96C /* SelectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SelectionViewController.h; path = /Users/martin/Work/code/scratch/ios/Subs/Subs/SelectionViewController.h; sourceTree = "<absolute>"; };
+		5B6E20771608DF6400FCE96C /* SelectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SelectionViewController.m; path = /Users/martin/Work/code/scratch/ios/Subs/Subs/SelectionViewController.m; sourceTree = "<absolute>"; };
+		5B6E20791608DF6400FCE96C /* ParamsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParamsViewController.h; sourceTree = "<group>"; };
+		5B6E207A1608DF6400FCE96C /* ParamsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParamsViewController.m; sourceTree = "<group>"; };
+		5B6E208A1609149600FCE96C /* SchemeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchemeViewController.h; sourceTree = "<group>"; };
+		5B6E208B1609149600FCE96C /* SchemeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchemeViewController.m; sourceTree = "<group>"; };
+		5B6E209116091D7500FCE96C /* NSArray+Addons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Addons.h"; sourceTree = "<group>"; };
+		5B6E209216091D7500FCE96C /* NSArray+Addons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Addons.m"; sourceTree = "<group>"; };
+		5B6E2095160A615E00FCE96C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = /System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<absolute>"; };
+		5BC2FF6F160B10EC00792238 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +56,7 @@
 				5B6E20621608DF6400FCE96C /* UIKit.framework in Frameworks */,
 				5B6E20641608DF6400FCE96C /* Foundation.framework in Frameworks */,
 				5B6E20661608DF6400FCE96C /* CoreGraphics.framework in Frameworks */,
+				5B6E2096160A615E00FCE96C /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +66,8 @@
 		5B6E20521608DF6400FCE96C = {
 			isa = PBXGroup;
 			children = (
+				5B64B7CE16345F4F00272112 /* blijdorp-icon.png */,
+				5BC2FF6F160B10EC00792238 /* Default-568h@2x.png */,
 				5B6E20671608DF6400FCE96C /* Subs */,
 				5B6E20601608DF6400FCE96C /* Frameworks */,
 				5B6E205E1608DF6400FCE96C /* Products */,
@@ -70,6 +85,7 @@
 		5B6E20601608DF6400FCE96C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5B6E2095160A615E00FCE96C /* AudioToolbox.framework */,
 				5B6E20611608DF6400FCE96C /* UIKit.framework */,
 				5B6E20631608DF6400FCE96C /* Foundation.framework */,
 				5B6E20651608DF6400FCE96C /* CoreGraphics.framework */,
@@ -83,11 +99,15 @@
 				5B6E20701608DF6400FCE96C /* SubsAppDelegate.h */,
 				5B6E20711608DF6400FCE96C /* SubsAppDelegate.m */,
 				5B6E20731608DF6400FCE96C /* MainStoryboard.storyboard */,
-				5B6E20761608DF6400FCE96C /* SubsMasterViewController.h */,
-				5B6E20771608DF6400FCE96C /* SubsMasterViewController.m */,
-				5B6E20791608DF6400FCE96C /* SubsDetailViewController.h */,
-				5B6E207A1608DF6400FCE96C /* SubsDetailViewController.m */,
+				5B6E20761608DF6400FCE96C /* SelectionViewController.h */,
+				5B6E20771608DF6400FCE96C /* SelectionViewController.m */,
+				5B6E20791608DF6400FCE96C /* ParamsViewController.h */,
+				5B6E207A1608DF6400FCE96C /* ParamsViewController.m */,
 				5B6E20681608DF6400FCE96C /* Supporting Files */,
+				5B6E208A1609149600FCE96C /* SchemeViewController.h */,
+				5B6E208B1609149600FCE96C /* SchemeViewController.m */,
+				5B6E209116091D7500FCE96C /* NSArray+Addons.h */,
+				5B6E209216091D7500FCE96C /* NSArray+Addons.m */,
 			);
 			path = Subs;
 			sourceTree = "<group>";
@@ -157,6 +177,8 @@
 			files = (
 				5B6E206C1608DF6400FCE96C /* InfoPlist.strings in Resources */,
 				5B6E20751608DF6400FCE96C /* MainStoryboard.storyboard in Resources */,
+				5BC2FF70160B10EC00792238 /* Default-568h@2x.png in Resources */,
+				5B64B7CF16345F4F00272112 /* blijdorp-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,8 +191,10 @@
 			files = (
 				5B6E206E1608DF6400FCE96C /* main.m in Sources */,
 				5B6E20721608DF6400FCE96C /* SubsAppDelegate.m in Sources */,
-				5B6E20781608DF6400FCE96C /* SubsMasterViewController.m in Sources */,
-				5B6E207B1608DF6400FCE96C /* SubsDetailViewController.m in Sources */,
+				5B6E20781608DF6400FCE96C /* SelectionViewController.m in Sources */,
+				5B6E207B1608DF6400FCE96C /* ParamsViewController.m in Sources */,
+				5B6E208C1609149700FCE96C /* SchemeViewController.m in Sources */,
+				5B6E209316091D7500FCE96C /* NSArray+Addons.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +242,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -238,7 +262,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -251,6 +275,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Subs/Subs-Prefix.pch";
 				INFOPLIST_FILE = "Subs/Subs-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -262,6 +287,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Subs/Subs-Prefix.pch";
 				INFOPLIST_FILE = "Subs/Subs-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -286,6 +312,7 @@
 				5B6E20801608DF6400FCE96C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
