@@ -36,8 +36,8 @@
 		5B6E20701608DF6400FCE96C /* SubsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubsAppDelegate.h; sourceTree = "<group>"; };
 		5B6E20711608DF6400FCE96C /* SubsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubsAppDelegate.m; sourceTree = "<group>"; };
 		5B6E20741608DF6400FCE96C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		5B6E20761608DF6400FCE96C /* SelectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SelectionViewController.h; path = /Users/martin/Work/code/scratch/ios/Subs/Subs/SelectionViewController.h; sourceTree = "<absolute>"; };
-		5B6E20771608DF6400FCE96C /* SelectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SelectionViewController.m; path = /Users/martin/Work/code/scratch/ios/Subs/Subs/SelectionViewController.m; sourceTree = "<absolute>"; };
+		5B6E20761608DF6400FCE96C /* SelectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectionViewController.h; sourceTree = "<group>"; };
+		5B6E20771608DF6400FCE96C /* SelectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectionViewController.m; sourceTree = "<group>"; };
 		5B6E20791608DF6400FCE96C /* ParamsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParamsViewController.h; sourceTree = "<group>"; };
 		5B6E207A1608DF6400FCE96C /* ParamsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParamsViewController.m; sourceTree = "<group>"; };
 		5B6E208A1609149600FCE96C /* SchemeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchemeViewController.h; sourceTree = "<group>"; };
@@ -152,6 +152,11 @@
 				CLASSPREFIX = Subs;
 				LastUpgradeCheck = 0440;
 				ORGANIZATIONNAME = "Martin van Amersfoorth";
+				TargetAttributes = {
+					5B6E205C1608DF6400FCE96C = {
+						DevelopmentTeam = EBA2J277UX;
+					};
+				};
 			};
 			buildConfigurationList = 5B6E20571608DF6400FCE96C /* Build configuration list for PBXProject "Subs" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -272,11 +277,14 @@
 		5B6E207F1608DF6400FCE96C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Subs/Subs-Prefix.pch";
 				INFOPLIST_FILE = "Subs/Subs-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -284,11 +292,14 @@
 		5B6E20801608DF6400FCE96C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Subs/Subs-Prefix.pch";
 				INFOPLIST_FILE = "Subs/Subs-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
