@@ -11,8 +11,9 @@
 @interface SchemeViewController : UIViewController<UITextFieldDelegate>
 
 @property (strong, nonatomic) NSArray *players;
-@property (nonatomic) int squadSize;
-@property (nonatomic) float rotationSpeed;
+@property (nonatomic) int numOutfield;
+@property (nonatomic) int numSubs;
+@property (nonatomic) int numMinutes;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UILabel *countdownLabel;

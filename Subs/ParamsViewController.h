@@ -12,9 +12,8 @@
 
 @property (strong, nonatomic) NSArray *players;
 
-@property (weak, nonatomic) IBOutlet UITextField *totalField;
-@property (weak, nonatomic) IBOutlet UITextField *squadField;
-@property (weak, nonatomic) IBOutlet UITextField *substField;
-@property (weak, nonatomic) IBOutlet UITextField *speedField;
+@property (weak, nonatomic) IBOutlet UITextField *outfieldPlayersField;
+@property (weak, nonatomic) IBOutlet UITextField *substitutePlayersField;
+@property (weak, nonatomic) IBOutlet UITextField *minutesField;
 
 @end

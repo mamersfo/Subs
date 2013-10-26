@@ -11,5 +11,7 @@
 @interface NSArray (Addons)
 
 - (NSArray *)shuffle;
+- (NSArray *)intersection:(NSArray *)other;
+- (NSArray *)difference:(NSArray *)other;
 
 @end

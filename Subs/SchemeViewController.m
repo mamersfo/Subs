@@ -22,14 +22,28 @@ NSArray *sectionData;
 {
     [super viewDidLoad];
     
-    sectionTitles = @[ @"Subs", @"Lineup" ];
+    NSArray *keepers = [_players intersection:@[@"Dieuwe", @"Luc", @"Ziggy"]];
+    NSString *keeper = [keepers firstObject];
+    keepers = @[keeper];
+    _players = [_players difference:keepers];
     
-    NSRange subsRange = NSMakeRange(_squadSize, [_players count] - _squadSize);
-    NSRange lineupRange = NSMakeRange(0, _squadSize);
+    NSArray *pips = [_players intersection:@[@"Stijn", @"Vito"]];
+    _players = [_players difference:pips];
+    
+    NSArray *subs = [_players subarrayWithRange:NSMakeRange(0, _numSubs)];
+    NSArray *squad = [_players difference:subs];
+    
+    sectionTitles = @[
+        @"Subs",
+        @"Squad",
+        @"Pips",
+        @"Keeper" ];
     
     sectionData = @[
-        [[NSMutableArray alloc] initWithArray:[_players subarrayWithRange:subsRange]],
-        [[NSMutableArray alloc] initWithArray:[_players subarrayWithRange:lineupRange]] ];
+        [[NSMutableArray alloc] initWithArray:subs],
+        [[NSMutableArray alloc] initWithArray:squad],
+        [[NSMutableArray alloc] initWithArray:pips],
+        [[NSMutableArray alloc] initWithArray:keepers]];
 }
 
 - (void)setPlayers:(NSArray *)players
@@ -37,14 +51,19 @@ NSArray *sectionData;
     _players = [players shuffle];
 }
 
-- (void)setSquadSize:(int)squadSize
+- (void)setNumOutfield:(int)numOutfield
 {
-    _squadSize = squadSize;
+    _numOutfield = numOutfield;
 }
 
-- (void)setRotationSpeed:(float)rotationSpeed
+- (void)setNumSubs:(int)numSubs
 {
-    _rotationSpeed = rotationSpeed;
+    _numSubs = numSubs;
+}
+
+- (void)setNumMinutes:(int)numMinutes
+{
+    _numMinutes = numMinutes;
 }
 
 - (NSString *)timeRemaining:(int)seconds
@@ -52,11 +71,28 @@ NSArray *sectionData;
     return [NSString stringWithFormat:@"%d:%02d",(int)floor( seconds / 60.0 ), seconds % 60];
 }
 
-- (void)updateTimer
-{    
-    if ( ++counter < _rotationSpeed )
+- (int)rotationSpeed
+{
+    NSMutableArray *subs = [sectionData objectAtIndex:0];
+    NSMutableArray *lineup = [sectionData objectAtIndex:1];
+    
+    int numberOfPlayers = subs.count + lineup.count;
+    
+    if ( numberOfPlayers > 0 )
     {
-        [countdownLabel setText:[self timeRemaining:(int)_rotationSpeed - counter]];
+        return _numMinutes * 60 / numberOfPlayers;
+    }
+    
+    return 0;
+}
+
+- (void)updateTimer
+{
+    int rotationSpeed = [self rotationSpeed];
+    
+    if ( ++counter < rotationSpeed )
+    {
+        [countdownLabel setText:[self timeRemaining:rotationSpeed - counter]];
     }
     else
     {
@@ -65,9 +101,14 @@ NSArray *sectionData;
     }
 }
 
+- (void)showTimer
+{
+    [countdownLabel setText:[self timeRemaining:[self rotationSpeed]]];
+}
+
 - (void)startTimer
 {
-    [countdownLabel setText:[self timeRemaining:_rotationSpeed]];
+    [self showTimer];
     counter = 0;
     timer = [NSTimer scheduledTimerWithTimeInterval:1.0
                 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
@@ -108,6 +149,7 @@ NSArray *sectionData;
     {
         [_tableView setEditing:NO];
         [sender setTitle:@"Edit"];
+        [countdownLabel setText:[self timeRemaining:[self rotationSpeed]]];
     }
     else
     {

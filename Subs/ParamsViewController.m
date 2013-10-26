@@ -17,10 +17,9 @@
 
 #pragma mark - Managing the fields
 
-@synthesize totalField;
-@synthesize squadField;
-@synthesize substField;
-@synthesize speedField;
+@synthesize outfieldPlayersField;
+@synthesize substitutePlayersField;
+@synthesize minutesField;
 
 - (void)setPlayers:(NSArray *)players
 {
@@ -31,11 +30,10 @@
 - (void)updateView
 {
     int totalCount = [_players count];
-    int squadCount = [[squadField text] integerValue];
-    int substCount = totalCount - squadCount;
+    int outfieldPlayersCount = [[outfieldPlayersField text] integerValue];
+    int substitutePlayersCount = totalCount - outfieldPlayersCount - 1;
     
-    totalField.text = [[NSNumber numberWithInt:totalCount] stringValue];
-    substField.text = [[NSNumber numberWithInt:substCount] stringValue];
+    substitutePlayersField.text = [[NSNumber numberWithInt:substitutePlayersCount] stringValue];
 }
 
 - (void)viewDidLoad
@@ -46,16 +44,15 @@
 
 - (void)viewDidUnload
 {
-    [self setTotalField:nil];
-    [self setSquadField:nil];
-    [self setSubstField:nil];
-    [self setSpeedField:nil];
+    [self setOutfieldPlayersField:nil];
+    [self setSubstitutePlayersField:nil];
+    [self setMinutesField:nil];
     [super viewDidUnload];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField
 {
-    if ( theTextField == self.squadField || theTextField == self.speedField )
+    if ( theTextField == self.outfieldPlayersField || theTextField == self.minutesField )
     {
         [theTextField resignFirstResponder];
     }
@@ -65,7 +62,7 @@
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
-    if ( textField == self.squadField )
+    if ( textField == self.outfieldPlayersField )
     {
         [self updateView];
     }
@@ -76,8 +73,9 @@
     if ([[segue identifier] isEqualToString:@"setParams"])
     {
         [[segue destinationViewController] setPlayers:_players];
-        [[segue destinationViewController] setSquadSize:[[squadField text] integerValue]];
-        [[segue destinationViewController] setRotationSpeed:[[speedField text] integerValue] * 60.0];
+        [[segue destinationViewController] setNumOutfield:[[outfieldPlayersField text] integerValue]];
+        [[segue destinationViewController] setNumSubs:[[substitutePlayersField text] integerValue]];
+        [[segue destinationViewController] setNumMinutes:[[minutesField text] integerValue]];
     }
 }
 

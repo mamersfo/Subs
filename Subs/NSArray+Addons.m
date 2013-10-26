@@ -23,4 +23,34 @@
     return [NSArray arrayWithArray:tmp];
 }
 
+- (NSArray *)intersection:(NSArray *)other
+{
+    NSMutableArray *result = [[NSMutableArray alloc] init];
+    
+    for ( id anObject in self )
+    {
+        if ( [other containsObject:anObject] )
+        {
+            [result addObject:anObject];
+        }
+    }
+    
+    return result;
+}
+
+- (NSArray *)difference:(NSArray *)other
+{
+    NSMutableArray *result = [[NSMutableArray alloc] init];
+    
+    for ( id anObject in self )
+    {
+        if ( [other containsObject:anObject] == NO )
+        {
+            [result addObject:anObject];
+        }
+    }
+    
+    return result;
+}
+
 @end

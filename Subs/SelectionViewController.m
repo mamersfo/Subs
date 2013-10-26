@@ -24,8 +24,7 @@
     [super awakeFromNib];
         
     _selection = [[NSMutableArray alloc] initWithObjects:
-        @"Aaron", @"Amine", @"Dieuwe", @"Ernesto", @"Ilias", @"Luc",
-        @"Mohammed-Amine", @"Stijn", @"Vito", @"Ziggy", nil];
+        @"Aaron", @"Amine", @"Dieuwe", @"Ernesto", @"Ilias", @"Luc", @"Stijn", @"Vito", @"Ziggy", nil];
     
     _players = [[NSMutableSet alloc] init];
 }
